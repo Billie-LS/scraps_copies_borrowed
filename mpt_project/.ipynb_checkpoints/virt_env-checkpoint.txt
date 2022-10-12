@@ -1,0 +1,39 @@
+### Virtual environment attributes and / or constructs
+
+VIRTUAL #1 - jupyterlab_env
+
+system update / upgrade install
+	python -m pip install --upgrade pip 
+	conda update conda
+	conda update anaconda
+	conda install -c conda-forge nodejs
+	conda install -c conda-forge jupyterlab=3
+	conda update jupyterlab
+
+conda remove --name jupyterlab_dev —all
+jupyter kernelspec remove jupyterlab_dev
+conda create -n jupyterlab_env python=3.9 anaconda
+conda activate jupyterlab_env
+
+	conda install -c conda-forge nodejs
+	conda install -c conda-forge jupyterlab=3
+	conda update jupyterlab
+	conda install scikit-learn-intelex
+	python -m pip install ipykernel
+	
+	conda install -c conda-forge voila
+	
+	pip install fire
+	pip install questionary
+	conda install sqlalchemy
+	pip install voila
+	pip install pandas_datareader
+	pip install yfinance -U
+	pip install sanpy 
+	pip install --upgrade sanpy
+	pip install investpy 
+	pip install investpy --upgrade          # most uptodate
+	pip install plotly
+	pip install plotly --upgrade              # plotly-5.10.0
+	pip install python-dotenv
+	pip install alpaca-trade-api
