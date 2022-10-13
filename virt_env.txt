@@ -1,19 +1,18 @@
 ### Virtual environment attributes and / or constructs
 
-VIRTUAL #1 - jupyterlab_env
+conda info --envs
+
+VIRTUAL #5 - quant_env
 
 system update / upgrade install
-	python -m pip install --upgrade pip 
 	conda update conda
 	conda update anaconda
 	conda install -c conda-forge nodejs
 	conda install -c conda-forge jupyterlab=3
 	conda update jupyterlab
 
-conda remove --name jupyterlab_dev —all
-jupyter kernelspec remove jupyterlab_dev
-conda create -n jupyterlab_env python=3.9 anaconda
-conda activate jupyterlab_env
+conda create -n quant_env python=3.9 anaconda
+conda activate quant_env
 
 	conda install -c conda-forge nodejs
 	conda install -c conda-forge jupyterlab=3
@@ -37,3 +36,5 @@ conda activate jupyterlab_env
 	pip install plotly --upgrade              # plotly-5.10.0
 	pip install python-dotenv
 	pip install alpaca-trade-api
+	pip install PyPortfolioOpt
+	pip install pyfolio
