@@ -148,7 +148,7 @@ def ef_plot(mean_returns, covariance, hurdle_rate=0.0275, boundaries_set = (0,1)
                           
                           
 stocklist = ['GOOGL', 'AAPL', 'TSLA', 'IBM']
-# stocks = [stocks + '.AX' for stocks in stocklist]  # i think this +ax requirement deprecated/resolved
+# stocks = [stocks + '.AX' for stocks in stocklist]  # i think this +AX requirement deprecated/resolved
 stocks = stocklist
 
 end_date = dt.datetime.now()
