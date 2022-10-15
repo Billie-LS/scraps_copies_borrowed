@@ -1,0 +1,59 @@
+
+
+### Base equations
+
+## raw dataframe from conyea/yan/dinesh starts here
+## raw dataframe shape:  index = date, close prices, first column/column 0 =  <market/index>. 
+
+# trade_days_year = 252  # variable to set number of trading days per year
+# hurdle_rate = 0.0275 # is variable for risk free rate ~ 2-3%
+
+## 'Close' prices dataframe for ALL portfolio assets and <market/index>
+# dataframe_name_close = <raw_dataframe_name>['Close']
+
+# _____________________________________________________________
+
+
+
+# variance is 'squared average change around the mean'
+# The variance of <any_asset_name> using a rolling 60-day window.
+# any_asset_name_variance = daily_returns['any_asset_name'].rolling(window=60).var().dropna()
+
+# alternate code
+# The variance of <any_asset_name> using a rolling 60-day window.
+# any_asset_name_df = daily_returns.loc[:,['any_asset_name']]
+# any_asset_name_variance = any_asset_name_df.rolling(window=60).var().dropna()
+
+
+# the individual covariance of <any_asset_name> using a rolling 60-day window 
+# any_asset_name_60_cov = daily_returns['<any_asset_name>'].rolling(window=60).cov(daily_returns['<market/index>'])
+
+
+# the individual beta based on the 60-day rolling covariance compared to the market <market/index>
+# any_asset_name_60_beta = any_asset_name_60_cov / <market/index>_variance
+
+# the AVERAGE individual beta based on the 60-day rolling covariance compared to the market <market/index>
+# any_asset_name_60_beta_avg = (any_asset_name_60_cov / <market/index>_variance).mean()
+
+# the assets PORTFOLIO beta based on the 60-day rolling covariance compared to the market <market/index>
+# asset_portfolio_60_beta = asset_portfolio_cov / <market/index>_variance
+
+# the AVERAGE assets PORTFOLIO beta based on the 60-day rolling covariance compared to the market <market/index>
+# asset_portfolio_60_beta_avg = (asset_portfolio_cov / <market/index>_variance).mean()
+
+## Box plot analysis/visualize volatility
+# print('Pandas .plot() function used with kind="box", size, and title parameters specified: \n')
+# daily_returns.plot(kind='box', figsize=(20,15), title='Cumulativea Returns- <asset names> vs. index')
+
+## heatmap analysis/visualize volatility
+# htmap(asset_correlation, annot=True, vmin=-1, vmax=1, fmt=".2f", cmap="Spectral")  #heatmap correlation
+
+
+
+## Create a new DataFrame containing only the portfolio assets and drops the <market/index> column from the DataFrame
+
+#  <dataframe_name>.drop(columns=['column_name'], inplace = True)
+# asset_daily_returns = <dataframe_name>.drop(columns = '<market/index name>', inplace = True)
+
+# asset_daily_returns.rolling(window=21).std() # 21 day rolling standard deviation, for all portfolio assets
+

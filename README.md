@@ -1,4 +1,4 @@
-## **This is a collection of code (with limited modifications and or changes) as transcribd from public provided code on YouTube**
+## **This is a collection of code with modifications and or changes as transcribd from public provided code on YouTube tutorial and added sources as indicated below**
 ### at present in the current script is non-functional
 
 
@@ -44,6 +44,8 @@ plotly.graph_objects
 ### Source/reference
 
 [pyfolio](https://github.com/quantopian/pyfolio)
+
+[PyPortfolio Docs](https://pyportfolioopt.readthedocs.io/en/latest/index.html)
 
 [PyPortfolioOpt ](https://github.com/robertmartin8/PyPortfolioOpt)
 
